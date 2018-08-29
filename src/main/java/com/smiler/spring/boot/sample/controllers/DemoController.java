@@ -2,6 +2,9 @@ package com.smiler.spring.boot.sample.controllers;
 
 import com.smiler.spring.boot.sample.bean.Demo;
 import java.util.Date;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +22,16 @@ public class DemoController {
         demo.setName("Angel");
         demo.setCreateTime(new Date());
         demo.setUpdateTime(new Date());
+        return demo;
+    }
+
+    @GetMapping()
+    public Demo getDemo(Demo demo) {
+        return demo;
+    }
+
+    @PostMapping()
+    public Demo postDemo(@RequestBody Demo demo) {
         return demo;
     }
 }
