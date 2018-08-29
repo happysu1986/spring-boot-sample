@@ -13,8 +13,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * Created by xile.su on 2018/8/29
  */
 @Slf4j
-@Configuration
-public class FastJsonAdapter extends WebMvcConfigurerAdapter {
+//@Configuration
+public class FastJsonConfiguration1 extends WebMvcConfigurerAdapter {
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
