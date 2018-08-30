@@ -1,6 +1,8 @@
 package com.smiler.spring.boot.sample.controllers;
 
 import com.smiler.spring.boot.sample.bean.Demo;
+import com.smiler.spring.boot.sample.scheduling.SchedulingConfig;
+import com.smiler.spring.boot.sample.utils.ApplicationContextHolder;
 import java.util.Date;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,10 +39,20 @@ public class DemoController {
         return demo;
     }
 
-    @GetMapping("exception")
+    @GetMapping("/exception")
     public Demo exception() {
 
         log.info("100/0= {}", 100 / 0);
         return getDemo();
+    }
+
+    @GetMapping("/bean")
+    public Boolean testBean() {
+        return ApplicationContextHolder.getBean(SchedulingConfig.class) != null;
+    }
+
+    @GetMapping("/html")
+    public String html(){
+        return "/test.html";
     }
 }

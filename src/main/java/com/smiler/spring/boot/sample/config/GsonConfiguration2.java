@@ -13,7 +13,7 @@ import org.springframework.http.converter.json.GsonHttpMessageConverter;
 /**
  * Created by xile.su on 2018/8/29
  */
-@Configuration
+//@Configuration
 public class GsonConfiguration2 {
 
     @Bean
