@@ -2,6 +2,7 @@ package com.smiler.spring.boot.sample.controllers;
 
 import com.smiler.spring.boot.sample.bean.Demo;
 import java.util.Date;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/demo")
+@Slf4j
 public class DemoController {
 
     @RequestMapping("/getDemo")
@@ -33,5 +35,12 @@ public class DemoController {
     @PostMapping()
     public Demo postDemo(@RequestBody Demo demo) {
         return demo;
+    }
+
+    @GetMapping("exception")
+    public Demo exception() {
+
+        log.info("100/0= {}", 100 / 0);
+        return getDemo();
     }
 }

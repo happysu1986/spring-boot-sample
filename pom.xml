@@ -44,6 +44,12 @@
       <artifactId>gson</artifactId>
       <version>2.7</version>
     </dependency>
+
+    <!--数据库依赖-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
   </dependencies>
 
   <build>
