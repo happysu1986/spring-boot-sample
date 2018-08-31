@@ -10,7 +10,7 @@ public class MyInterceptor2 implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println(">>>MyInterceptor2>>>>>>>在请求处理之前进行调用（Controller方法调用之前）");
-        return false;
+        return true;
     }
 
 
