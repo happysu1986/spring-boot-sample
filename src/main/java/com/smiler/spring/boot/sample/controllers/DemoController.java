@@ -23,7 +23,7 @@ public class DemoController {
     public Demo getDemo() {
         Demo demo = new Demo();
         demo.setId(1);
-        demo.setName("Angel");
+        demo.setName("Angel2");
         demo.setCreateTime(new Date());
         demo.setUpdateTime(new Date());
         return demo;
