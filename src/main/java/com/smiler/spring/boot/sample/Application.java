@@ -1,10 +1,8 @@
 package com.smiler.spring.boot.sample;
 
-import com.smiler.spring.boot.sample.config.WiselySettings;
 import com.smiler.spring.boot.sample.servlet.MyServlet1;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;

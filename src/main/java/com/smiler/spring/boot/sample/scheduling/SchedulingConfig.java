@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 public class SchedulingConfig {
 
-    @Scheduled(cron = "0/10 * * * * ?") // 每10秒执行一次
+//    @Scheduled(cron = "0/10 * * * * ?") // 每10秒执行一次
     public void scheduler() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(">>>>>>>>> SchedulingConfig.scheduler() --> " + sdf.format(new Date()));

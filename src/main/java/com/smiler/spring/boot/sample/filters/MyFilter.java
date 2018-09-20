@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "bcd", urlPatterns = "/*")
+//@WebFilter(filterName = "bcd", urlPatterns = "/*")
 public class MyFilter implements Filter {
 
     @Override
